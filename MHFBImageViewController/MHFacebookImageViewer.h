@@ -41,8 +41,8 @@ typedef void (^MHFacebookImageViewerClosingBlock)(void);
 @property (weak, readonly, nonatomic) UIViewController *rootViewController;
 @property (nonatomic,strong) NSURL * imageURL;
 @property (nonatomic,strong) UIImageView * senderView;
-@property (nonatomic,weak) MHFacebookImageViewerOpeningBlock openingBlock;
-@property (nonatomic,weak) MHFacebookImageViewerClosingBlock closingBlock;
+@property (nonatomic,copy) MHFacebookImageViewerOpeningBlock openingBlock;
+@property (nonatomic,copy) MHFacebookImageViewerClosingBlock closingBlock;
 @property (nonatomic,weak) id<MHFacebookImageViewerDatasource> imageDatasource;
 @property (nonatomic,assign) NSInteger initialIndex;
 
