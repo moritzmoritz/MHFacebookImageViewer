@@ -51,8 +51,8 @@ static const CGFloat kMinImageScale = 1.0f;
 @property(nonatomic,assign) NSInteger initialIndex;
 @property(nonatomic,strong) UIPanGestureRecognizer* panGesture;
 
-@property (nonatomic,weak) MHFacebookImageViewerOpeningBlock openingBlock;
-@property (nonatomic,weak) MHFacebookImageViewerClosingBlock closingBlock;
+@property (nonatomic,copy) MHFacebookImageViewerOpeningBlock openingBlock;
+@property (nonatomic,copy) MHFacebookImageViewerClosingBlock closingBlock;
 
 @property(nonatomic,weak) UIView * superView;
 
@@ -69,8 +69,6 @@ static const CGFloat kMinImageScale = 1.0f;
 @synthesize rootViewController = _rootViewController;
 @synthesize viewController = _viewController;
 @synthesize blackMask = _blackMask;
-@synthesize closingBlock = _closingBlock;
-@synthesize openingBlock = _openingBlock;
 @synthesize doneButton = _doneButton;
 @synthesize senderView = _senderView;
 @synthesize imageIndex = _imageIndex;
@@ -436,8 +434,6 @@ static const CGFloat kMinImageScale = 1.0f;
 @implementation MHFacebookImageViewer
 @synthesize rootViewController = _rootViewController;
 @synthesize imageURL = _imageURL;
-@synthesize openingBlock = _openingBlock;
-@synthesize closingBlock = _closingBlock;
 @synthesize senderView = _senderView;
 @synthesize initialIndex = _initialIndex;
 
